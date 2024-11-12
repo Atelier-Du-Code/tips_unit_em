@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+:root {
+  --surface_color_degrade: linear-gradient(to bottom right, #ffb9d2, #f08362);
+  --surface_color: linear-gradient(to bottom, #fde4e0,#fde4e0, #f9cfbd, #ffccb6);
+  --param_font_color: #da6e4d;
+  --font_children: #ffe6d7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.general {
+  background: var(--surface_color);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.parent {
+  background: var(--surface_color_degrade);
+  width: 700px;
+  height: 100px;
+  font-size: 16px;
+  border-radius: 10px;
+
+  display: flex; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 10vh;
+  padding: 20px 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.enfant {
+ font-size: 1em;
+ color: var(--font_children);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.param {
+  display: flex;
+  flex-direction: column;
+  border: var(--param_font_color) solid 1px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-top: 10vh;
+  padding: 5px 25px;
+  width:50vw;
+}
+
+.slider {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  background-color: rgb(60, 18, 99,0);
+}
+
+.slider h2 {
+  font-size: 14px;
+  color: var(--param_font_color);
+}
+
+.slider h3 {
+  font-size: 10px;
+  font-weight: normal; 
+  color: var(--param_font_color);
+}
+
+.MuiSlider-thumb {
+  background-color: #FF4081;  /* Couleur du curseur */
+}
+
+.MuiSlider-track {
+  background-color: #FF7043;  /* Couleur de la barre sélectionnée */
+}
+
+.MuiSlider-rail {
+  background-color: #FFEB3B;  /* Couleur du rail non sélectionné */
+}
+
+.MuiSlider-root {
+  color: #FF7043;  /* Couleur du fond */
 }
