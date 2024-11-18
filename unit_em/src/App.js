@@ -21,6 +21,8 @@ function App() {
     <div className='general'>
       <div className="parent" style={{ fontSize: `${fontSize}px` }}>
         <h1 className="enfant"  style={{ fontSize: `${fontSizeChildren}em` }}>Texte enfant</h1>
+        <p className='enfant_blanc'> ({fontSizeChildren} x la taille de la police du parent)</p>
+        <p>Texte en taille de la police du conteneur parent ({fontSize}px)</p>
       </div>
 
       <div className='param'>
@@ -30,11 +32,12 @@ function App() {
         <Slider          
           aria-label="Small steps"
           value={fontSize}  
+          color='red'
           onChange={handleSliderChange}
           getAriaValueText={valuetext}
           step={2}
           marks
-          min={5}
+          min={11}
           max={25}
           valueLabelDisplay="auto"
         />
@@ -42,10 +45,11 @@ function App() {
 
       <div className="slider">
         <h2>Taille de la police de l'enfant (em)</h2>
-        <h3>taille de police du parent ( {fontSize}px ) x taille de la police de l'enfant ( {fontSizeChildren}px ) <br/>= taille de la police effective ( {fontSize*fontSizeChildren}px )</h3>
+       
         <Slider          
           aria-label="Small steps"
           value={fontSizeChildren}  
+          color='red'
           onChange={handleSliderChildrenChange}
           getAriaValueText={valuetext}
           step={1}

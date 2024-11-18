@@ -1,8 +1,9 @@
 :root {
-  --surface_color_degrade: linear-gradient(to bottom right, #ffb9d2, #f08362);
-  --surface_color: linear-gradient(to bottom, #fde4e0,#fde4e0, #f9cfbd, #ffccb6);
-  --param_font_color: #da6e4d;
+  --surface_color_degrade: black;
+  --surface_color: black;
+  --param_font_color: #fff8f3;
   --font_children: #ffe6d7;
+  --font_parent: #7c6c66;
 }
 
 .general {
@@ -16,21 +17,34 @@
 
 .parent {
   background: var(--surface_color_degrade);
-  width: 700px;
-  height: 100px;
+  width: 50vw;
+  height: 30vh;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 30px;
+  border: 2px white dashed;
+  color:var(--font_parent);
 
   display: flex; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 10vh;
   padding: 20px 25px;
 }
 
+.parent p {
+  margin-top: 20px;
+}
+
 .enfant {
  font-size: 1em;
  color: var(--font_children);
+ margin-bottom: -10px;
+}
+.enfant_blanc {
+  color: var(--font_children);
+  margin-top: -20px;
+  margin-bottom: -10px;
 }
 
 .param {
@@ -55,7 +69,7 @@
 }
 
 .slider h2 {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--param_font_color);
 }
 
