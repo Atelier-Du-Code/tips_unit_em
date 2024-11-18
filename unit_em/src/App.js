@@ -43,7 +43,8 @@ function App() {
             marks
             min={11}
             max={21}
-            valueLabelDisplay="auto"/>
+            valueLabelDisplay="auto"
+            />
         </div>
 
         <div className="slider">

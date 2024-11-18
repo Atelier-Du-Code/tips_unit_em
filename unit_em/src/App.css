@@ -79,3 +79,8 @@
   font-weight: normal; 
   color: var(--param_font_color);
 }
+
+
+.MuiSlider-root {
+  color: #f0971b;  /* Couleur du fond */
+}
